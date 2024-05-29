@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>JSP/Servlet시작!!!</h1>
+<ul>
+<!-- 절대경로 시 : http://192.168.0.76:9090는 생략됨 -->
+<!-- 상대경로 시 : ./ => 현재 index.html은 webshop 바로 아래있다. -->
+<li><a href="/webshop/first3?userid=100">first서블릿 연결(절대경로)</a></li>
+<li><a href="first3?userid=200">first서블릿 연결(상대경로)</a></li>
+</ul>
+<!-- 기본은 get요청 -->
+<li>
+<form action="first" method="get">
+	<input type="text" name="userid" value="1234">
+	<input type="submit" value="get요청">
+</form>
+</li>
+<form action="first" method="post">
+	<input type="text" name="userid" value="4321">
+	<input type="submit" value="post요청">
+</form>
+<li><a href="emp/empList">모든 직원조회</a></li>
+
+<!-- http://ip:post -->
+<li>
+<form action="emp/empDetail" method="get">
+	<input type="text" name="empid" value="1234">
+	<input type="submit" value="직원정보">
+</form>
+</li>
+<!-- 밑에 얘만 절대경로, 나머진 상대경로 씀, 다 상관없음 -->
+<li><a href="/webshop24/dept/deptList.do">모든 부서조회</a></li>
+<li><a href="dept/deptInsert.do">부서입력</a></li>
+<li>
+<form action="dept/deptUpdate.do" method="get">
+	<input type="text" name="deptid" value="100">
+	<input type="submit" value="부서정보">
+</form>
+</li>
+
+<li>
+<form action="first" method="get">
+	<input type="text" name="userid" value="1234">
+	<input type="submit" value="get요청">
+</form>
+</li>
+<li>
+	<form action="jsp/set">
+	<input type="text" name="myname" value="종경">
+	<input type="submit" value="부서정보">
+	</form>
+</li>
+	
+<li>
+	<form action="jsp/cookieSet">
+	<input type="text" name="userid" value="ljk52589">
+	<input type="text" name="userpass" value="ppppp">
+	<input type="submit" value="로그인">
+	</form>
+</li>
+<li>
+	<form action="jsp/setSession">
+	<input type="text" name="userid" value="ljk52589">
+	<input type="text" name="userpass" value="ppppp">
+	<input type="submit" value="로그인(세션연습)">
+	</form>
+</li>
+</body>
+</html>
